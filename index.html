@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Form Login</title>
+        <link rel="stylesheet" href="/build/tailwind.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+    </head>
+    <body class>
+        <div class="lg:flex">
+            <div class="lg:w-1/2 xl:max-w-screen-sm">
+                <div class="py-12 bg-indigo-100 lg:bg-white flex justify-center lg:justify-start lg:px-12">
+                    <div class="cursor-pointer flex items-center">
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 40" width="50" height="40">
+                            <defs>
+                              <image width="48" height="38" id="img1" href="data:image/png;base64,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"/>
+                            </defs>
+                            <style>
+                              tspan { white-space:pre }
+                            </style>
+                            <use id="Background" href="#img1" x="1" y="1" />
+                          </svg>
+                        </div>
+                        <div class="text-2xl text-gray-500 tracking-wide ml-2 font-semibold">MUJIIB.GUNAWAN</div>
+                    </div>
+                </div>
+                <div class="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
+                    <h2 class="text-center text-4xl text-gray-600 font-display font-semibold lg:text-left xl:text-5xl
+                    xl:text-bold">Log in</h2>
+                    <div class="mt-12">
+                        <form>
+                            <div>
+                                <div class="text-sm font-bold text-gray-700 tracking-wide">Email Address</div>
+                                <input class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="" placeholder="mugu@gmail.com">
+                            </div>
+                            <div class="mt-8">
+                                <div class="flex justify-between items-center">
+                                    <div class="text-sm font-bold text-gray-700 tracking-wide">
+                                        Password
+                                    </div>
+                                    <div>
+                                        <a class="text-xs font-display font-semibold text-indigo-600 hover:text-indigo-800
+                                        cursor-pointer">
+                                            Forgot Password?
+                                        </a>
+                                    </div>
+                                </div>
+                                <input class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="" placeholder="Enter your password">
+                            </div>
+                            <div class="mt-10">
+                              <a href="http://127.0.0.1:8080/dashboard.html" button class="bg-gray-400 text-gray-100 p-4 whitespace-pre rounded-full tracking-wide
+                                font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-indigo-600
+                                shadow-lg">
+                                Log In</a>
+                                </button>
+                            </div>
+                        </form>
+                        <div class="mt-12 text-sm font-display font-semibold text-gray-700 text-center">
+                            Don't have an account ? <a class="cursor-pointer text-indigo-600 hover:text-indigo-800">Sign up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden lg:flex items-center justify-center bg-indigo-100 flex-1 h-screen"></div>
+              <div class="w-auto lg:flex">
+		              <img src="https://i.ibb.co/r4RhfKx/logo-Mujiib-Gunawan.jpg" class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block">
+	            </div>
+            </div>
+        </div>
+    </body>
+</html>

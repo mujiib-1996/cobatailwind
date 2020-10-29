@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dashboard Layout</title>
+    <link href="https://unpkg.com/tailwindcss@1.1.4/dist/tailwind.min.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-300 h-full text-gray-600 flex flex-col">
+    <div class="h-12 bg-gray-600 flex items-center justify-between shadow">
+      <div class="cursor-pointer flex items-center">
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 40" width="50" height="40">
+                            <defs>
+                              <image width="48" height="38" id="img1" href="data:image/png;base64,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"/>
+                            </defs>
+                            <style>
+                              tspan { white-space:pre }
+                            </style>
+                            <use id="Background" href="#img1" x="1" y="1" />
+                          </svg>
+                        </div>
+                        <div class="container text-xl text-gray-900 tracking-wide ml-1 font-semibold">MUJIIB.DASHBOARD</div>
+                    </div>
+      <div class="flex text-gray-900 items-center px-5">
+        <div>Super Administrator</div>
+        <div class="ml-2"><img src="https://i.ibb.co/7GbDTqr/foto4x6.png" alt="" class="h-10 rounded-full border" /></div>
+      </div>
+    </div>
+
+    <div class="flex flex-1">
+      <div class="bg-gray-800 p-6 w-64">
+        <ul>
+          <li>
+            <a href="" class="flex items-center px-4 py-2 my-3 rounded hover:bg-gray-900 hover:text-gray-400 bg-gray-900 text-gray-400">
+              <svg class="h-4" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M19,20H5V4H7V7H17V4H19M12,2A1,1 0 0,1 13,3A1,1 0 0,1 12,4A1,1 0 0,1 11,3A1,1 0 0,1 12,2M19,2H14.82C14.4,0.84 13.3,0 12,0C10.7,0 9.6,0.84 9.18,2H5A2,2 0 0,0 3,4V20A2,2 0 0,0 5,22H19A2,2 0 0,0 21,20V4A2,2 0 0,0 19,2Z"
+                />
+              </svg>
+              <span class="ml-2">Order Management</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center px-4 py-2 my-3 rounded hover:bg-gray-900 hover:text-gray-400">
+              <svg class="h-4" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M16,15H9V13H16V15M19,11H9V9H19V11M19,7H9V5H19V7M3,5V21H19V23H3A2,2 0 0,1 1,21V5H3M21,1A2,2 0 0,1 23,3V17C23,18.11 22.11,19 21,19H7A2,2 0 0,1 5,17V3C5,1.89 5.89,1 7,1H21M7,3V17H21V3H7Z"
+                />
+              </svg>
+              <span class="ml-2">Content Management</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center px-4 py-2 my-3 rounded hover:bg-gray-900 hover:text-gray-400">
+              <svg class="h-4" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4Z"
+                />
+              </svg>
+              <span class="ml-2">Attachment Management</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center px-4 py-2 my-3 rounded hover:bg-gray-900 hover:text-gray-400">
+              <svg class="h-4" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M16.5 15.5C18.22 15.5 20.25 16.3 20.5 16.78V17.5H12.5V16.78C12.75 16.3 14.78 15.5 16.5 15.5M16.5 14C14.67 14 11 14.92 11 16.75V19H22V16.75C22 14.92 18.33 14 16.5 14M9 13C6.67 13 2 14.17 2 16.5V19H9V17.5H3.5V16.5C3.5 15.87 6.29 14.34 9.82 14.5A5.12 5.12 0 0 1 11.37 13.25A12.28 12.28 0 0 0 9 13M9 6.5A1.5 1.5 0 1 1 7.5 8A1.5 1.5 0 0 1 9 6.5M9 5A3 3 0 1 0 12 8A3 3 0 0 0 9 5M16.5 8.5A1 1 0 1 1 15.5 9.5A1 1 0 0 1 16.5 8.5M16.5 7A2.5 2.5 0 1 0 19 9.5A2.5 2.5 0 0 0 16.5 7Z"
+                />
+              </svg>
+              <span class="ml-2">User Management</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center px-4 py-2 my-3 rounded hover:bg-gray-900 hover:text-gray-400">
+              <svg class="h-4" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,3.18L19,6.3V11.22C19,12.92 18.5,14.65 17.65,16.17C16,14.94 13.26,14.5 12,14.5C10.74,14.5 8,14.94 6.35,16.17C5.5,14.65 5,12.92 5,11.22V6.3L12,3.18M12,6A3.5,3.5 0 0,0 8.5,9.5A3.5,3.5 0 0,0 12,13A3.5,3.5 0 0,0 15.5,9.5A3.5,3.5 0 0,0 12,6M12,8A1.5,1.5 0 0,1 13.5,9.5A1.5,1.5 0 0,1 12,11A1.5,1.5 0 0,1 10.5,9.5A1.5,1.5 0 0,1 12,8M12,16.5C13.57,16.5 15.64,17.11 16.53,17.84C15.29,19.38 13.7,20.55 12,21C10.3,20.55 8.71,19.38 7.47,17.84C8.37,17.11 10.43,16.5 12,16.5Z"
+                />
+              </svg>
+              <span class="ml-2">Roles and Permissions</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center px-4 py-2 my-3 rounded hover:bg-gray-900 hover:text-gray-400">
+              <svg class="h-4" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M12,12H19C18.47,16.11 15.72,19.78 12,20.92V12H5V6.3L12,3.19M12,1L3,5V11C3,16.55 6.84,21.73 12,23C17.16,21.73 21,16.55 21,11V5L12,1Z"
+                />
+              </svg>
+              <span class="ml-2">Audit Log</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex items-center px-4 py-2 my-3 rounded hover:bg-gray-900 hover:text-gray-400">
+              <svg class="h-4" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10M10,22C9.75,22 9.54,21.82 9.5,21.58L9.13,18.93C8.5,18.68 7.96,18.34 7.44,17.94L4.95,18.95C4.73,19.03 4.46,18.95 4.34,18.73L2.34,15.27C2.21,15.05 2.27,14.78 2.46,14.63L4.57,12.97L4.5,12L4.57,11L2.46,9.37C2.27,9.22 2.21,8.95 2.34,8.73L4.34,5.27C4.46,5.05 4.73,4.96 4.95,5.05L7.44,6.05C7.96,5.66 8.5,5.32 9.13,5.07L9.5,2.42C9.54,2.18 9.75,2 10,2H14C14.25,2 14.46,2.18 14.5,2.42L14.87,5.07C15.5,5.32 16.04,5.66 16.56,6.05L19.05,5.05C19.27,4.96 19.54,5.05 19.66,5.27L21.66,8.73C21.79,8.95 21.73,9.22 21.54,9.37L19.43,11L19.5,12L19.43,13L21.54,14.63C21.73,14.78 21.79,15.05 21.66,15.27L19.66,18.73C19.54,18.95 19.27,19.04 19.05,18.95L16.56,17.95C16.04,18.34 15.5,18.68 14.87,18.93L14.5,21.58C14.46,21.82 14.25,22 14,22H10M11.25,4L10.88,6.61C9.68,6.86 8.62,7.5 7.85,8.39L5.44,7.35L4.69,8.65L6.8,10.2C6.4,11.37 6.4,12.64 6.8,13.8L4.68,15.36L5.43,16.66L7.86,15.62C8.63,16.5 9.68,17.14 10.87,17.38L11.24,20H12.76L13.13,17.39C14.32,17.14 15.37,16.5 16.14,15.62L18.57,16.66L19.32,15.36L17.2,13.81C17.6,12.64 17.6,11.37 17.2,10.2L19.31,8.65L18.56,7.35L16.15,8.39C15.38,7.5 14.32,6.86 13.12,6.62L12.75,4H11.25Z"
+                />
+              </svg>
+              <span class="ml-2">System Settings</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="p-6 flex flex-wrap">
+        <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+          <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
+            <img src="https://lh3.googleusercontent.com/VLemsm6GPrws4V5Lt4Q-Fm0R8jtiqh2lDz0BPGWW4a8FstDCKtmIpBDeqT1ovLjxEdFj010seOKxZki1cQPENA0nbE9Jcsrn19pTO3YM3wgwOoFfTIxN7KFX3OZzR79qYUdEbdo2LZ_KqFTf69zx7Qcv4uGZskWBPmXgmNRIVGac7RuxJE_hm34TZnsOdcf9tNnJIMJKoQ9B8XDidc5ZWWM90G7H578kIrCDDAebj-v0kc4jXEOekuL-kXFLY7RuzJHgxBZsw7DQc7444N-bEaLgVXU4advc5G_dEzYNBOu2diiB7N4DyCpU2oZqg7uAZ7-a0zHa0uSOAIhSCyVxBOyJyOpm_cRhHmi8TrcZElIO8MgbX1dQY1r0D2xjlzbWe4bTb1_LPbEkWM1af3pHoKnS2zidkaLEgMSik-qtTaGa2pmzJipfm1fyFaag8GwWDd7ASeIqju8ovUSAV22CKsCT_Ju685T2jBamVHmM3Onq3DtPMbzarY7vQFzeZtTSmU-iESv-DgJi04vWlnRTuSj-HzCjjoWrq9SHIAXvm_ToG9JEX3CYUuliajtZdLe1d9jk1l_rGI2Wa6rOtKjnRWXgdIM46WZ0wtJXP85yGPGz6TKyXa9ZTzaKW7reBHHCT_PImpVoxOSmFemjuqFNe2eBqE8-gUUEHb0NN2TXgU6IQTeQVXTvV10RITvZQg=w1216-h912-no?authuser=0" alt="" class="h-full w-full object-cover" />
+          </div>
+        </div>
+        <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+          <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
+            <img src="https://lh3.googleusercontent.com/ymfL0r-xrZs06SW9UUHju86uGH6FAVSia9nGI7v5MU0qCJv98UCwuTZ-z4h6rqeM7C4IuqxfCXVKek7dXtJbC3y00dLZtuSfNbxkfNYHZoZLO14J2mwdYkx6rq0yFgKGwRKYpDjmBUFTOFlRn00rdGsuvyZTpyY3v942GNLrPEPPJWRX1FURkdY0Mpr_affUUMmlXdWkD2L-q1-p-ozPgKvmI1sqGNp5_ccdmtR26iTBAa-Eu_-Lxfsby36U4UNmZImqgm7Jgc9ihuVLACpTAZ4r7jY1F42tnh8rqXjgHtNFZ5YrkG9V1tvEKsOc7LCzqG7-SYiU72Sc9GbT50YIsYQu7lKVTWb9KWhIx-l3gCCI7HhHyOZSeXuwN5wbXkY_j1uRAiap4PbMZZmZqYlTQzJGfcv4r5mKaq0MrqYXYqSPfif_EDm1mPx3rK0s-7g1cXEtdcKu_wAcsZIIdzpx6D0TXoVJ9OJ2pa0ZtmLfG5vbFF4yOjc16bxSjQlDYdOZox5QbnqK4YjLsg51zL9G1h5pJ-w7cJN_AMhiI53r-I49iCqAci9or4i6wldElnkD7QHxhHBfikVw6wfTdRkPl6FPoqo8DZeTFdSWYHxK9ERQ4-eoBMSv5jZBVHKy3Y9PV9Lz8_O8aAFIrOSh_GVltXADvj2eciGcb3c4p8t-YpJpvMSEZLtGbhSU9Rhsb6k=w1040-h780-no?authuser=0" alt="" class="h-full w-full object-cover" />
+          </div>
+        </div>
+        <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+          <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
+            <img src="https://lh3.googleusercontent.com/N2DAGUAjHMhTpN9bo2NugprOn32IcOpaOCmLpllRC6GhKyPULt7kTmIqADLaRFSk_MukL5Ob75Q6xYrxzVYzRXeBympJe6IevwgCoMN1bcNYOzVFYl0v2Vy929teokpyNWJY-890nKsJqWLPDX8anzOfJ6mwtVMDP0WXxb9khkv5Cgo9RDYOvwW1tO9ZGealgSGMSbM0zCx1CVnNXrJRXVxdnJmYJHWIH9Q6HSnZ_U9tMbaVnZw7dky8hTkj8XsethiyszXGPaY8u2D1I1qA4aiR00AkZHlp-HGxQ6HJhvTj22YfXS5MgECoC7loRmvbWR6cZAAlkir_TLP1MaX9spk5aR4K73Pt-pT705wbbnvNmyCgeMiOfeefn0a6Ty_9N1djjCsKRioou5SEVRuAYbNnqhoe_GbnVwmrrjvtuP9gaPdh3tP-yPTsD3az-BWb33qzBbGN9eo10vBmXUkKf6RWxBVi4xorkvdP6YmCRN8JUxVR8qOGKY9mggTo4TKWZ5U8vVRTwFk3V0w9-9TEPkdKJk23SLoqIBxRNY_ztzvFsZlWQMUjpL5W9sfVCyGBR9ILE10X7EAS0ouNiN_HQLAxveGAmZ8oV0u9eYNyDUl7DZOoZ-wlhsxsbV5w6kVjn-CGawUWLHOO6Uye1saD5WisN68Za9JGq4Ccn5y0P5dd-oykAlho9hNHP3Xnww=w924-h616-no?authuser=0" alt="" class="h-full w-full object-cover" />
+          </div>
+        </div>
+          <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+            <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
+              <img src="https://lh3.googleusercontent.com/Tdh64-c0U7QN99CvrFA8YlmyuDtjiyglpEPevbxklpttZcO4FBOB7dBY1SukvfmWEVNrpgJgCiWLU7I2LrfMVUl1bBWRRYemXu2SXYrhZjOpjk1hEOeDtsbJqw107TIrsmkCK_jWwFHUXBv-dwOtxHCGTSwkZkmFiVPgJBeQtl9SDR8IsEzHtHDMJuqyL3vuPiqHdM__KKNIjMkhbL17SROjodi-OAUK17kUl-Za7guy0APkqcwKM-ejp0OCMRALI4BnmMx6OK8Hjojjl_RfpU_2zOoAc8YQnOZ6AFssNjxi0AWj5n5FYbS8cZl4JvhweJWRvZCas0pxK2B87J06ay5er_b1TZdcn_5P_AnzqRyiBdjBQtomC6BTfPsWOLEuIoSG_9GSUnRROxZXFSx5PX5IMP4TYqZLBaI0477tCbTkgdGuXoTav5pAn-P5VkDUjd0-R7Jmn93J1HcrQE7w8HoV4V8DIZJk10ITdpfunX4CzxS24TT2m9tw7VHjekFIO1eGrZ2wNfISAb7BBWlTPRN3L4CVD3IkgY1W2tLNDjO0sEgLAxZKOlaFnB_XS9F2DungB9XPT5862WyI7aD0s_NkldKGzD3rv-7czRbBTIW_ifSVKswiPojMOpAbzie-_9ESfUJlYC9mIslmhNOruYp6dcpP2K_mQ3vKrUF0VyGu1LcUS--0ucZAK2tIsA=w1216-h912-no?authuser=0" alt="" class="h-full w-full object-cover" />
+            </div>
+          </div>
+          <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+            <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
+              <img src="https://lh3.googleusercontent.com/96gMyloP-NYphLfrJDVU2EWM8Bm0UOPYlk8sDfokE38KUbyJditUJGackXbBz4_1QhRPfBdYuuwL3aSJZPcwHZiJN6c6XROJ-yJCOZyAOG9YylP9J75Z__dz4lyBiv_YvAtyWK_p01fg-VYfCekIsKqCHlf-b9FfuLFDnqrEfVuYHU9pzkCPqvVquHp9oWqP85rJ-SufNrbbRDBBhu13L7sPocRQMWG0MH6-NQRgn2NU0XOoZ02sRItT0luowx6rBp4W_DcQkkX8tTuz2XjcFM6388e3o7-oKHoyHQtmXBLnZow15jJUgNA1pYi_b6vH5WsGlrwuBH5L--eti_ETAEMbGnatWUnBQ_DDcmxMMBQXUhc4XBExzb5SfAxeASWa8XxEzh0wiKe65yG-kJTTS_XsErZ5Ho80ZNri2EYbNhT2SQz23Cq2g3uKBrnKzFwOxp5ItyJXfYPm0Uok5gINe2Tr195E5O8Z8104fsDZQbzyBATEGy6qBnBX2oNw3wIkWfPAowWjv72o7HG3OYD8gN0qNNUo2dU5xTFtDdQKVnMxY8lYhz9Mu8pYuvksC83fNN6Lmsr6BR2YjTBtt2jx_Z04_Db1ebDEd39_kE2-fcp8qxS69L4gsVjomG5U4G6HhPriogi4Gs5YRIPfrDQslXaVePWqct5ino-zgmrFoUH6FkRVSlJqMHAy5mXEUQ=w684-h912-no?authuser=0" alt="" class="h-full w-full object-cover" />
+            </div>
+          </div>
+      <div class="flex-1">
+        <div class="p-8">
+          <h1 class="text-2xl text-gray-800">Order Management</h1>
+          <div class="bg-gray-500 h-4 mt-4"></div>
+          <div class="bg-gray-500 h-4 mt-4"></div>
+          <div class="bg-gray-500 h-4 mt-4"></div>
+          <div class="bg-gray-500 h-4 mt-4"></div>
+          <div class="bg-gray-500 h-4 mt-4"></div>
+          <div class="bg-gray-500 h-4 mt-4"></div>
+          <div class="bg-gray-500 h-4 mt-4"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
